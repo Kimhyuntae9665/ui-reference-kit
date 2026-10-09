@@ -14,11 +14,11 @@
 
 ### Git을 몰라도 사용할 수 있습니다
 
-1. **[ZIP 다운로드](https://github.com/Kimhyuntae9665/ui-reference-kit/archive/refs/heads/main.zip)**를 누르고 압축을 풉니다. GitHub의 **Code → Download ZIP**으로도 받을 수 있습니다.
+1. [ZIP 다운로드](https://github.com/Kimhyuntae9665/ui-reference-kit/archive/refs/heads/main.zip)를 누르고 압축을 풉니다. GitHub의 **Code → Download ZIP**으로도 받을 수 있습니다.
 2. 압축을 푼 폴더에서 **`index.html`을 더블클릭**합니다. 사진·설명·분류 필터가 있는 책자가 브라우저에서 열립니다.
-3. **`OVERVIEW.html`**은 20개 사진을 한눈에 비교하는 목차입니다. 사진을 누르면 책자의 해당 후보 설명으로 이동합니다.
+3. `OVERVIEW.html`은 20개 사진을 한눈에 비교하는 목차입니다. 사진을 누르면 책자의 해당 후보 설명으로 이동합니다.
 4. 책자에서 **공간 / 흐름 / 시간 / 비교 / 근거 / 설명**을 골라 후보를 좁힙니다. 이미지를 누르면 개별 JPG를 크게 볼 수 있습니다.
-5. **‘당시 프로젝트 적용 시안 보기 · 미구현’**을 펼치면 같은 스타일을 업무 예시에 적용한 SVG가 보입니다.
+5. ‘당시 프로젝트 적용 시안 보기 · 미구현’을 펼치면 같은 스타일을 업무 예시에 적용한 SVG가 보입니다.
 
 사진과 설명은 모두 저장소에 포함돼 있어 인터넷 없이 읽을 수 있습니다. 외부 원본 출처를 열 때만 인터넷이 필요합니다. GitHub의 HTML 파일 페이지는 소스 코드 보기이므로, 책자를 보려면 ZIP을 내려받거나 로컬 서버를 실행하세요.
 
@@ -41,7 +41,7 @@ python -m http.server 5176 --bind 127.0.0.1
 
 환경에 따라 Windows에서는 `py -m http.server 5176 --bind 127.0.0.1`, macOS/Linux에서는 `python3 -m http.server 5176 --bind 127.0.0.1`을 사용합니다.
 
-브라우저에서 **[http://127.0.0.1:5176/gallery/index.html](http://127.0.0.1:5176/gallery/index.html)**을 엽니다.
+브라우저에서 [http://127.0.0.1:5176/gallery/index.html](http://127.0.0.1:5176/gallery/index.html)을 엽니다.
 
 | 조작 | 무엇을 할 수 있나요? |
 | --- | --- |
