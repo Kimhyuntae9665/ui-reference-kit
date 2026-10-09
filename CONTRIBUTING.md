@@ -1,41 +1,39 @@
 # 수정·새 후보 제안 안내
 
-처음에는 잘못된 링크, 설명 오류, 번역, 실행 안내 개선처럼 작은 수정도 좋습니다. Issue에 후보 번호·문제·원본 출처를 적거나 브랜치를 만들어 Pull Request를 보내주세요.
+현재32개이며 후보 수는 고정돼 있지 않습니다. 링크·번역·설명 개선은 Issue 또는 Pull Request로 제안해 주세요. 후보를 추가할 때는 **기존 후보와 표현 원리·조작이 어떻게 다른지** 먼저 적습니다.
 
-## 기존 후보 수정
+## 원본 데이터 수정
 
-1. `candidates/NN.md`의 사진·원작·출처·화면 설명을 확인합니다.
-2. `manifest.json`의 해당 ID도 함께 수정합니다. 주요 필드는 다음과 같습니다.
+1. `manifest.json`의 후보 메타데이터를 수정합니다. 번호·제목·출처·이미지·분류·화면 설명·시각 원리·적합 업무·재사용 기준·주의점을 유지합니다.
+2. 참고 이미지는 `local_reference_image`, 자체 SVG는 `local_concept_image`에 연결합니다. 확장자와 실제 파일을 맞추세요.
+3. 시안은 `scenes.json`에도 같은 ID로 넣습니다. `svg`, `adaptation`, `interaction`, `tradeoff`가 필요합니다. SVG파일과 JSON의 내용도 동일하게 유지합니다.
+4. 새 후보는 `reference_count`, `concept_count`를 실제 개수로 바꾸고 README목차를 추가합니다.
+5. 아래 명령으로 집계 문서·오프라인 책자·선택 갤러리를 다시 생성합니다. 생성된 파일을 각각 수동 수정하면 다음 생성 때 사라집니다.
 
-| 필드 | 의미 |
-| --- | --- |
-| `id`, `title_ko` | 후보 번호와 제목 |
-| `source_url`, `reference_name` | 원작 출처와 이름 |
-| `local_reference_image` | 실제 참고 JPG 경로 |
-| `local_concept_image` | 자체 SVG 시안 경로 |
-| `visual_description`, `visual_principle` | 실제 화면 설명과 가져올 원리 |
-| `category`, `suitable_tasks`, `reuse_rule` | 분류·적합 업무·재사용 기준 |
-| `matchroom_adaptation`, `interaction_idea`, `tradeoff` | 초기 예시에 대한 적용·조작·단점 |
-| `evidence_status`, `snapshot_date`, `snapshot_type` | 확인 수준·기준일·캡처 유형 |
+```bash
+python scripts/build_catalog.py
+python scripts/validate.py
+```
 
-3. 집계 문서 `CATALOG.md`와 HTML 책자 `index.html`, 선택 갤러리 `gallery/references.json`의 같은 후보를 동기화합니다. 이미지 변경 시 `overview.jpg` 미리보기도 다시 캡처합니다.
-4. `python scripts/validate.py`를 실행하고 브라우저에서 사진·설명·출처 연결을 확인합니다.
+분류·추가 후보 필터·5개 묶음·마지막 부분 페이지는 데이터에서 생성됩니다. 수동으로 `sheet-7` 같은 버튼을 추가할 필요가 없습니다. Python표준 라이브러리만 사용합니다.
 
-## 다른 프로젝트의 선택으로 바꾸기
+## 확장 후보의 검증 필드
 
-`manifest.json`의 `selected_ids`·각 후보의 `selected`, `index.html`의 선택 요약, `DECISIONS.md`에 선택한 번호와 원리를 함께 기록합니다. 갤러리의 브라우저 선택은 문서와 자동 동기화되지 않으므로 번호를 따로 기록하세요.
+|필드|적을 내용|
+|---|---|
+|`differentiation_from_existing`|기존 후보 번호와 무엇이 다른가|
+|`methodology_name`|정보 구조·조작 방법 이름|
+|`interaction_verified`|직접 수행한 입력·조작·관찰 결과, 미확인 범위|
+|`reference_kind`|실제 브라우저 화면 또는 역사적 연구 개념도 등|
+|`discovery_path`|발견한 커뮤니티·논문·공식 문서 경로|
+|`snapshot_date`, `evidence_status`|기준일·확인 수준|
 
-## 새 후보 제안
+현재 조작한 제품과 문서에만 남은 프로토타입을 구분합니다. 빈 캔버스·광고 배너보다 작업 대상이 보이는 화면을 고르고, 기능·수치·성과를 직접 확인한 범위만 설명합니다. 원작의 전체 글·제품·미디어를 대신 배포하지 않습니다. 외부 캡처는 [권리 안내](NOTICE.md)를 적용하며 자체 SVG에는 미구현 표시를 유지합니다.
 
-기존20개와 표현 원리나 조작이 어떻게 다른지 먼저 설명합니다. 단순 색상 변경보다 실제 사용자에게 다른 이해·선택 방식을 제공하는 후보가 좋습니다.
+## 선택과 브라우저 검수
 
-- 공식 원작 링크와 실제 작업 화면을 제시합니다. 빈 캔버스·광고 배너보다 업무 대상과 조작이 드러난 화면을 고릅니다.
-- 자체 제작 또는 공개 사용 조건이 확인된 이미지와 SVG를 우선합니다. 외부 캡처는 권리·출처·원본 표시를 확인하며 전체 제품이나 글을 무단 재배포하는 형태로 확장하지 않습니다.
-- `candidates/NN.md`·`images/NN-reference.jpg`·`concepts/NN-concept.svg`와 메타데이터를 같은 ID로 묶습니다. 사진과 시안을 혼동하지 않습니다.
-- SVG는 자체 제작하고 실제 구현이 아니면 미구현임을 표시합니다.
-- 21개 이상으로 확장할 때는 `reference_count`, `concept_count`, README 목차, HTML 집계, `scenes.json`, `gallery/scenes.js`의 시안 정의를 업데이트합니다. 현재 선택 갤러리의4개 묶음·`sheet-1`–`sheet-4` UI와 관련 범위 처리도 늘려야 합니다.
-- 추가한 실제 ID 수가 `reference_count`와 일치해야 합니다. 검수 스크립트는 메타데이터에 맞춰 개수를 검사합니다.
+기본 선택은 `manifest.json`의 `selected_ids`와 각 후보의 `selected`로 관리합니다. 선택 이유는 `DECISIONS.md`에 적습니다. 브라우저에서 바꾼 선택은 localStorage에만 남아 이 파일을 자동 수정하지 않습니다.
 
-캡처에 이메일·토큰·실제 고객 문서·내부 시스템 정보가 없는지 확인합니다. 수치·성과·현재 기능은 직접 확인한 범위만 설명합니다. 참고 스타일을 특정 회사의 공식 요구나 제품 성능 보증으로 표현하지 않습니다.
+로컬 서버를 실행해 전체·추가·분류·마지막 묶음·선택 보기, 실제 참고/시안 전환, 이미지 확대·출처 링크, 최대3개 제한·새로고침 저장, 빈 결과를 확인합니다. 모바일 화면에서도 이미지·버튼·설명이 잘리지 않는지 봅니다. 이미지가 바뀌면 README미리보기를 다시 캡처합니다.
 
-코드 변경은 빌드 도구 없는 브라우저 JavaScript와 Python 표준 라이브러리를 유지하고, 불필요한 의존성·추적 스크립트·외부 데이터 전송을 추가하지 않습니다.
+이메일·토큰·실제 고객 문서·내부 정보가 캡처나 파일에 없는지 확인하세요. 추가 의존성·추적 스크립트·외부 데이터 전송은 기본 구성에 넣지 않습니다.

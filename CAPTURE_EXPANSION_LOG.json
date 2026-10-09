@@ -1,0 +1,114 @@
+{
+  "date": "2026-10-09",
+  "method": "browser screenshot; original content unchanged",
+  "captures": [
+    {
+      "id": 21,
+      "local_file": "images/21-reference.png",
+      "source_page": "https://observablehq.com/@d3/zoomable-treemap",
+      "displayed_image_source": "https://observablehq.com/@d3/zoomable-treemap",
+      "reference_kind": "live_browser_screenshot",
+      "verified_interaction": "vis를 클릭해 operator·data·controls 등 하위 집단으로 바뀌는 것을 확인했습니다.",
+      "crop": "page top through chart"
+    },
+    {
+      "id": 22,
+      "local_file": "images/22-reference.png",
+      "source_page": "https://vega.github.io/vega/examples/parallel-coordinates-interactive/",
+      "displayed_image_source": "https://vega.github.io/vega/examples/parallel-coordinates-interactive/",
+      "reference_kind": "live_browser_screenshot",
+      "verified_interaction": "Cylinders 축에서 범위를 드래그해 강조 대상이 바뀌는 것을 확인했습니다. 축 재배열·더블클릭 초기화는 공식 안내에서 확인했습니다.",
+      "crop": "example header and chart"
+    },
+    {
+      "id": 23,
+      "local_file": "images/23-reference.png",
+      "source_page": "https://www.dagitty.net/dags.html",
+      "displayed_image_source": "https://www.dagitty.net/dags.html",
+      "reference_kind": "live_browser_screenshot",
+      "verified_interaction": "normal에서 moral graph로 전환해 선택 모드와 그래프 표현이 달라지는 것을 확인했습니다. 효과 식별 전체 정확성을 별도 검증한 것은 아닙니다.",
+      "crop": "normal browser viewport"
+    },
+    {
+      "id": 24,
+      "local_file": "images/24-reference.png",
+      "source_page": "https://observablehq.github.io/notebook-kit/system-guide",
+      "displayed_image_source": "https://observablehq.github.io/notebook-kit/system-guide",
+      "reference_kind": "live_browser_screenshot",
+      "verified_interaction": "x 입력을 50에서70으로 바꾸자 x² 결과가2500에서4900으로 바뀌었습니다. 가이드 아래 일부 별도 라이브러리 예제 오류도 있어 전체 노트북 정상 동작을 주장하지 않습니다.",
+      "crop": "reactivity explanation and cells"
+    },
+    {
+      "id": 25,
+      "local_file": "images/25-reference.png",
+      "source_page": "https://ravichugh.github.io/sketch-n-sketch/releases/uist-2019-acm-archive/",
+      "displayed_image_source": "https://ravichugh.github.io/sketch-n-sketch/releases/uist-2019-acm-archive/",
+      "reference_kind": "live_browser_screenshot",
+      "verified_interaction": "Box Volume 예시를 로드하고 핸들을 끌자 point 좌표가[102,109]에서[129,130]으로 바뀌었습니다. 합성 후보 추천의 완료·정확도는 검증하지 않았습니다.",
+      "crop": "normal browser viewport"
+    },
+    {
+      "id": 26,
+      "local_file": "images/26-reference.png",
+      "source_page": "https://cmd-kit.vercel.app/",
+      "displayed_image_source": "https://cmd-kit.vercel.app/",
+      "reference_kind": "live_browser_screenshot",
+      "verified_interaction": "Documentation 하위 명령을 열고 React를 입력해 검색 결과 순서가 바뀌는 것을 확인했습니다. 실제 명령의 외부 실행은 하지 않았습니다.",
+      "crop": "normal browser viewport"
+    },
+    {
+      "id": 27,
+      "local_file": "images/27-reference.png",
+      "source_page": "https://www.sbs.com.au/theboat/",
+      "displayed_image_source": "https://www.sbs.com.au/theboat/",
+      "reference_kind": "live_browser_screenshot",
+      "verified_interaction": "Click to start 후 스크롤해 Chapter1과 본문 장면으로 이동하는 것을 확인했습니다. 제작사의 WebGL 설명은 문서 근거이며 내부 구현을 검사하지 않았습니다.",
+      "crop": "normal browser viewport"
+    },
+    {
+      "id": 28,
+      "local_file": "images/28-reference.png",
+      "source_page": "https://visual-engineers.org/reflex/knowledge/case-studies/bim.html",
+      "displayed_image_source": "https://visual-engineers.org/reflex/assets/img/kb/case-studies/bim_layers.png",
+      "reference_kind": "historical_documented_prototype",
+      "verified_interaction": "공식 사례 문서와 LayerNavigation 원본 개념도를 확인했습니다. 2020년 Windows/WPF 연구 프로토타입이며 현재 브라우저에서 조작한 화면이 아닙니다.",
+      "crop": "normal browser viewport"
+    },
+    {
+      "id": 29,
+      "local_file": "images/29-reference.png",
+      "source_page": "https://www.timelinetraveler.com/timeline/race-to-the-moon-timeline",
+      "displayed_image_source": "https://www.timelinetraveler.com/timeline/race-to-the-moon-timeline",
+      "reference_kind": "live_browser_screenshot",
+      "verified_interaction": "공개91사건 예제를 열고 Zoom in을 두 번 눌러 시간 범위가 좁아지는 것을 확인했습니다. 캡처는 전체 흐름이 읽히는 초기 전체 범위입니다. 예제의 역사 사실은 검증 대상이 아닙니다.",
+      "crop": "normal browser viewport"
+    },
+    {
+      "id": 30,
+      "local_file": "images/30-reference.png",
+      "source_page": "https://projectmirador.org/demo/",
+      "displayed_image_source": "https://projectmirador.org/demo/",
+      "reference_kind": "live_browser_screenshot",
+      "verified_interaction": "공개 Bodleian 자료를 창으로 추가하고 각기1/84·2/84페이지를 열어 배치했습니다. 최초 다른 자료의 이미지 로딩 실패도 있어 캡처에는 로드된 공개 자료만 사용했습니다.",
+      "crop": "normal browser viewport"
+    },
+    {
+      "id": 31,
+      "local_file": "images/31-reference.png",
+      "source_page": "https://lidar-viewer.gishub.org/?url=https://s3.amazonaws.com/hobu-lidar/autzen-classified.copc.laz",
+      "displayed_image_source": "https://lidar-viewer.gishub.org/?url=https://s3.amazonaws.com/hobu-lidar/autzen-classified.copc.laz",
+      "reference_kind": "live_browser_screenshot",
+      "verified_interaction": "Autzen 공개 COPC 샘플이 로드되고 표시상10,653,336points를 확인했습니다. Color By를 Elevation에서Classification으로 바꾸자 범주 체크박스와 색이 바뀌었습니다. 측정 정확도는 검증하지 않았습니다.",
+      "crop": "normal browser viewport"
+    },
+    {
+      "id": 32,
+      "local_file": "images/32-reference.png",
+      "source_page": "https://compare.gbrlpzz.com/",
+      "displayed_image_source": "https://compare.gbrlpzz.com/",
+      "reference_kind": "live_browser_screenshot",
+      "verified_interaction": "Try an example의4기준6쌍을 모두Equal로 입력해 각25%가 나온 결과와Detailed Matrix를 확인했습니다. 예시 입력 결과이며 일반적인 추천 정확도를 검증한 것이 아닙니다.",
+      "crop": "normal browser viewport"
+    }
+  ]
+}

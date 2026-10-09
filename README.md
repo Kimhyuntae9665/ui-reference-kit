@@ -1,14 +1,30 @@
-# UI Reference Kit — 사진과 설명으로 고르는 20가지 화면 방향
+# UI Reference Kit — 사진과 설명으로 고르는 32가지 화면 방향
 
 **공간 모형·흐름도·시간축·근거 지도·인터랙티브 설명을 비교하고, 내 프로젝트에 맞는 UI 방향을 고르는 참고 라이브러리입니다.**
 
-일반 대시보드 외의 구성을 찾을 때 사용할 수 있습니다. 실제 참고 화면 20개에 설명·출처·적용 아이디어·조작 방식·주의점을 붙이고, 동일한 업무 예시로 만든 SVG 시안 20개와 선택 갤러리를 함께 제공합니다.
+일반 대시보드 외의 구성을 찾을 때 사용할 수 있습니다. 기존20개에 새로운 정보 구조·조작 방법12개를 더해 **32개 참고 사례·32개 자체 SVG 시안**을 제공합니다. 각 사례에는 설명·출처·적합 업무·기존 후보와의 차이·확인한 조작·주의점이 있습니다. 신규28번은 현재 웹 앱이 아닌 공식 연구 개념도입니다.
 
 **설치 없이 사진 책자를 볼 수 있고, Python만 있으면 선택 갤러리를 실행할 수 있습니다.** 디자인 도구·Node.js·API 키·LLM은 필요하지 않습니다.
 
-![20개 실제 참고 화면 목차](overview.jpg)
+![이번에 추가한12개 참고 사례](expansion-preview.png)
 
-> **English overview:** A Korean-first library of 20 UI directions: spatial scenes, process maps, timelines, comparisons, evidence graphs, and interactive explainers. Includes attributed reference screenshots, annotated notes, original SVG design studies, a browsable catalog, and an interactive selection gallery. Download the repository ZIP and open `index.html`; no build or API keys required. Original code, documentation, and SVG studies are MIT-licensed. Reference screenshots have separate rights; see [NOTICE.md](NOTICE.md).
+**추가21–32번만 보기:** 로컬에서 [추가 사진 목차](OVERVIEW.html#new)를 열거나 선택 갤러리의 **추가12개**를 누르세요. [확장 조사와 방법론](docs/RESEARCH_EXPANSION_20261009.md)에 조사 경로·선정 이유·접근 한계를 정리했습니다.
+
+<details><summary>초기20개 미리보기</summary>
+
+![초기20개 참고 화면](overview.jpg)
+
+</details>
+
+<details><summary>새12개 방법을 같은 업무에 적용한 자체 시안 · 미구현</summary>
+
+![추가12개 자체 SVG 시안](expansion-concepts-preview.png)
+
+정적 구상입니다. 갤러리의 필터·선택·확대 기능과 시안 내부에 제안한 업무 조작을 구분합니다.
+
+</details>
+
+> **English overview:** A Korean-first library of 32 UI directions: spatial scenes, process maps, timelines, comparisons, evidence graphs, and interactive explainers. Includes attributed reference screenshots, one historical research concept diagram, annotated notes, original SVG design studies, a browsable catalog, and an interactive selection gallery. Download the repository ZIP and open `index.html`; no build or API keys required. Original code, documentation, and SVG studies are MIT-licensed. Reference screenshots have separate rights; see [NOTICE.md](NOTICE.md).
 
 ## 1. 처음 사용하는 분은 여기부터
 
@@ -16,8 +32,8 @@
 
 1. [ZIP 다운로드](https://github.com/Kimhyuntae9665/ui-reference-kit/archive/refs/heads/main.zip)를 누르고 압축을 풉니다. GitHub의 **Code → Download ZIP**으로도 받을 수 있습니다.
 2. 압축을 푼 폴더에서 **`index.html`을 더블클릭**합니다. 사진·설명·분류 필터가 있는 책자가 브라우저에서 열립니다.
-3. `OVERVIEW.html`은 20개 사진을 한눈에 비교하는 목차입니다. 사진을 누르면 책자의 해당 후보 설명으로 이동합니다.
-4. 책자에서 **공간 / 흐름 / 시간 / 비교 / 근거 / 설명**을 골라 후보를 좁힙니다. 이미지를 누르면 개별 JPG를 크게 볼 수 있습니다.
+3. `OVERVIEW.html`은32개 참고 이미지을 한눈에 비교하는 목차입니다. 사진을 누르면 책자의 해당 후보 설명으로 이동합니다.
+4. 책자에서 **공간 / 흐름 / 시간 / 비교 / 근거 / 설명 / 계층 / 편집 / 탐색**을 골라 후보를 좁힙니다. 이미지를 누르면 개별 이미지를 크게 볼 수 있습니다.
 5. ‘당시 프로젝트 적용 시안 보기 · 미구현’을 펼치면 같은 스타일을 업무 예시에 적용한 SVG가 보입니다.
 
 사진과 설명은 모두 저장소에 포함돼 있어 인터넷 없이 읽을 수 있습니다. 외부 원본 출처를 열 때만 인터넷이 필요합니다. GitHub의 HTML 파일 페이지는 소스 코드 보기이므로, 책자를 보려면 ZIP을 내려받거나 로컬 서버를 실행하세요.
@@ -45,7 +61,7 @@ python -m http.server 5176 --bind 127.0.0.1
 
 | 조작 | 무엇을 할 수 있나요? |
 | --- | --- |
-| 20개 전체 / 01–05 … 16–20 | 모든 후보 또는 5개 묶음으로 비교 |
+|32개 전체 / 추가12개 / 분류 / 5개 묶음|전체·신규·분류별 비교, 마지막31–32도 표시|
 | 실제 참고 화면 / 프로젝트 적용 구상 | 원작 캡처와 새 SVG 시안을 구분해서 보기 |
 | 사진 클릭 | 확대 화면, 출처, 적용 방향, 조작 아이디어, 단점 읽기 |
 | 이 방향 선택 | 후보 최대 3개 선택 |
@@ -56,7 +72,7 @@ python -m http.server 5176 --bind 127.0.0.1
 
 서버 종료는 터미널에서 **Ctrl+C**입니다. 포트가 사용 중이면 `5177` 등 다른 포트로 실행하고 주소도 바꿉니다.
 
-## 3. 20개 후보 목록
+## 3. 32개 후보 목록
 
 번호를 누르면 사진·출처·자세한 설명이 있는 Markdown 문서를 읽을 수 있습니다.
 
@@ -82,6 +98,18 @@ python -m http.server 5176 --bind 127.0.0.1
 | [18](candidates/18.md) | 모식도를 조작하며 따라가는 설명 | Bartosz Ciechanowski GPS | 설명 |
 | [19](candidates/19.md) | 근거 층을 펼치는 기술 분해도 | Onshape Exploded Views | 근거 |
 | [20](candidates/20.md) | 설명과 조작이 붙은 실험 노트 | Distill t-SNE | 설명 |
+|[21](candidates/21.md)|면적에서 시작하는 계층 확대|D3 · Zoomable treemap|계층|
+|[22](candidates/22.md)|조건을 동시에 좁히는 다축 비교|Vega · Interactive Parallel Coordinates|비교|
+|[23](candidates/23.md)|가정을 검사하는 인과 모델|DAGitty v3.1|근거|
+|[24](candidates/24.md)|입력·코드·결과가 이어지는 계산 노트|Observable Notebooks 2.0 · System guide|설명|
+|[25](candidates/25.md)|결과를 만져 원본을 바꾸는 편집기|Sketch-n-Sketch · UIST 2019 archive|편집|
+|[26](candidates/26.md)|명령으로 들어가는 중첩 탐색|Cmd+kit · Command palette demo|탐색|
+|[27](candidates/27.md)|스크롤이 장면을 진행하는 공간 서사|SBS · The Boat|설명|
+|[28](candidates/28.md)|같은 위치에서 의미 층을 넘기는 렌즈|Visual Engineers · dSense BIM layer navigation|계층|
+|[29](candidates/29.md)|확대할수록 사건이 열리는 시간 지도|Timeline Traveler · The Race to the Moon|시간|
+|[30](candidates/30.md)|문서를 자유롭게 놓는 비교 작업 공간|Mirador · IIIF viewer demo|비교|
+|[31](candidates/31.md)|측정 점을 분류하며 보는 기술 장면|OpenGeos · LiDAR Point Cloud Viewer|공간|
+|[32](candidates/32.md)|한 번에 두 기준만 판단하는 의사결정|Pairwise · Comparison Tool|비교|
 
 각 후보에는 **화면 설명 → 시각 원리 → 적합한 업무 → 재사용 기준 → 프로젝트 적용 → 조작 아이디어 → 주의점 → 확인 수준**이 있습니다. 전체를 한 번에 읽으려면 [CATALOG.md](CATALOG.md)를 이용하세요.
 
@@ -105,7 +133,14 @@ python -m http.server 5176 --bind 127.0.0.1
 | 어떤 작업이 기다렸고 어느 시점에 실패했는가 | 08·10 |
 | 조건 하나를 바꾸면 결과가 어떻게 달라지는가 | 09·13 |
 | 판정은 어떤 문서·필드·규칙에 근거하는가 | 11·14·19 |
-| 사용자가 원리와 한계를 직접 이해하게 하려면 | 16·18·20 |
+|사용자가 원리와 계산을 직접 이해하게 하려면|16·18·20·24·27|
+|상위 요약에서 세부를 탐색하려면|21·28·29|
+|여러 대안과 기준을 좁혀 결정하려면|22·32|
+|가정과 편향을 검토하려면|23|
+|결과를 직접 조작해 원본 설정을 고치려면|25|
+|반복 명령을 빠르게 찾으려면|26|
+|여러 문서·페이지를 자유롭게 펼쳐 조사하려면|30|
+|실제 공간 측정값을 검사하려면|31|
 
 최대 3개에서 **가져올 원리와 버릴 요소**를 적고, 같은 작은 업무 예시로 화면을 구성해 보세요. 업무 상태·계산과 연결되지 않은 이동이나 임의 KPI를 실제 시뮬레이션으로 설명하지 않습니다.
 
@@ -116,7 +151,7 @@ python -m http.server 5176 --bind 127.0.0.1
 ```text
 첨부한 ui-reference-kit 또는 로컬 클론 폴더를 참고해 UI 방향을 정해 주세요.
 README.md, HOW_IT_WAS_MADE.md, manifest.json을 먼저 읽고,
-관련 후보의 candidates/NN.md, images/NN-reference.jpg,
+관련 후보의 candidates/NN.md, manifest.json에 적힌 참고 이미지,
 concepts/NN-concept.svg를 직접 확인하세요.
 
 대상 사용자: [누가 사용하는가]
@@ -124,7 +159,7 @@ concepts/NN-concept.svg를 직접 확인하세요.
 입력과 규칙: [데이터·제약·판정 기준]
 상태와 결과: [무엇이 바뀌고 무엇을 관찰하는가]
 
-20개 중 적합한 3개와 이유, 가져올 원리, 버릴 요소,
+32개 중 적합한 3개와 이유, 가져올 원리, 버릴 요소,
 대표 화면 구성과 핵심 조작 흐름을 제안해 주세요.
 실제 참고 화면·미구현 시안·최종 실행 캡처를 구분하세요.
 기존 예시의 도메인과 03·05·19 선택을 자동 적용하지 마세요.
@@ -136,13 +171,15 @@ concepts/NN-concept.svg를 직접 확인하세요.
 
 | 자료 | 의미 |
 | --- | --- |
-| `images/NN-reference.jpg` | 원작 제품·프로젝트가 브라우저에 표시된 실제 화면의 캡처 |
+|`images/NN-reference.jpg` 또는 `.png`|원작의 브라우저 표시 캡처.28은 공식 연구 개념도를 표시한 캡처|
 | `concepts/NN-concept.svg` | 같은 합성 업무 예시로 새로 구성한 디자인 시안. 미구현 |
 | `current-implementation/` | 선택한 원리를 후속 데모에 적용한 실제 실행 캡처. 앱 전체 소스는 포함하지 않음 |
 
-20개 SVG는 예시 수량 **발주100 / 입고80 / 청구100**, 단가 **10,000원 / 10,800원**을 동일하게 사용해 구성 방식만 비교했습니다. 회사 운영 성과나 원작 제품의 성능을 나타내는 값이 아닙니다.
+초기20개 SVG는 예시 수량 **발주100 / 입고80 / 청구100**, 단가 **10,000원 / 10,800원**을 동일하게 사용해 구성 방식만 비교했습니다. 회사 운영 성과나 원작 제품의 성능을 나타내는 값이 아닙니다.
 
-적용 사례는 **03 공간감 + 05 간결한 흐름 + 19 기술적 분해**입니다. 이 조합으로 운영 공간·흐름 실험·네 층의 근거 보기를 만들었습니다. 선택 이유와 실제 캡처는 [DECISIONS.md](DECISIONS.md)에 있습니다. 이 선택을 모든 프로젝트의 정답으로 제시하지 않습니다.
+추가12개도 같은 업무 맥락에서 표현 원리를 새로 그린 **정적인 미구현 시안**입니다. 참고 원작의 조작을 이 갤러리에서 그대로 실행하는 것은 아닙니다.31처럼 실제 공간 데이터가 필요한 방향은 적합 도메인과 한계를 먼저 검토하세요.
+
+초기 적용 사례는 **03 공간감 + 05 간결한 흐름 + 19 기술적 분해**입니다. 이 조합으로 운영 공간·흐름 실험·네 층의 근거 보기를 만들었습니다. 선택 이유와 실제 캡처는 [DECISIONS.md](DECISIONS.md)에 있습니다. 이 선택을 모든 프로젝트의 정답으로 제시하지 않습니다.
 
 ## 7. 폴더 구조
 
@@ -150,9 +187,9 @@ concepts/NN-concept.svg를 직접 확인하세요.
 ui-reference-kit/
 ├── README.md                  # 시작 안내
 ├── index.html                 # 사진·설명 책자, 서버 없이 열기
-├── OVERVIEW.html              # 20개 사진 목차
+├── OVERVIEW.html              #32개 참고 이미지 목차
 ├── overview.jpg               # README 미리보기
-├── candidates/01.md … 20.md    # 후보별 설명·출처
+├── candidates/01.md … 32.md    # 후보별 설명·출처
 ├── images/01-reference.jpg …   # 실제 참고 화면 캡처
 ├── concepts/01-concept.svg …   # 자체 SVG 시안
 ├── gallery/                   # 선택 갤러리 HTML/CSS/JS
@@ -164,6 +201,8 @@ ui-reference-kit/
 ├── NEW_SESSION_PROMPT.md       # 재사용 요청 예시
 ├── CONTRIBUTING.md            # 새 후보·설명 추가 방법
 ├── NOTICE.md                  # 원작·캡처·라이선스 구분
+├── docs/RESEARCH_EXPANSION_20261009.md # 확장 조사·검증
+├── scripts/build_catalog.py    # 데이터에서 문서·갤러리 생성
 └── scripts/validate.py         # 개수·링크·SVG 검수
 ```
 
@@ -177,13 +216,14 @@ ui-reference-kit/
 | `python`을 찾을 수 없습니다 | `py` 또는 `python3`를 시도하세요. 서버 없이 `index.html`만 보는 것은 가능합니다. |
 | `Address already in use`가 나옵니다 | 다른 서비스는 종료하지 말고 포트를 바꾸세요. |
 | 다른 브라우저에서 선택이 사라집니다 | 선택은 브라우저별 저장입니다. 번호를 따로 기록해 전달하세요. |
-| 원작의 작은 글자가 읽기 어렵습니다 | 개별 JPG 또는 후보에 연결된 원본 출처를 확인하세요. 캡처는 원본 미디어 파일이 아닙니다. |
+| 원작의 작은 글자가 읽기 어렵습니다 | 개별 이미지 또는 후보에 연결된 원본 출처를 확인하세요. 캡처는 원본 미디어 파일이 아닙니다. |
 
 ## 9. 수정·기여·검수
 
 수집·구성 과정을 반복하려면 [HOW_IT_WAS_MADE.md](HOW_IT_WAS_MADE.md)를, 후보를 추가하거나 오류를 고치려면 [CONTRIBUTING.md](CONTRIBUTING.md)를 읽어주세요. 출처·정확한 설명·권리 구분을 함께 유지합니다.
 
 ```bash
+python scripts/build_catalog.py
 python scripts/validate.py
 ```
 
@@ -191,7 +231,7 @@ Python 표준 라이브러리만 사용해 후보 ID·이미지·설명·SVG·�
 
 ## 10. 라이선스와 출처
 
-**자체 코드·문서·SVG 시안은 [MIT License](LICENSE)로 재사용할 수 있습니다.** 외부 제품·사이트의 참고 캡처와 로고는 해당 권리자에게 귀속되며 MIT 적용 대상이 아닙니다. `images/`, `overview.jpg`, `current-implementation/`의 캡처 권리는 [NOTICE.md](NOTICE.md)에서 별도로 안내합니다.
+**자체 코드·문서·SVG 시안은 [MIT License](LICENSE)로 재사용할 수 있습니다.** 외부 제품·사이트의 참고 캡처와 로고는 해당 권리자에게 귀속되며 MIT 적용 대상이 아닙니다. `images/`, `overview.jpg`, `expansion-preview.png`, `current-implementation/`의 캡처 권리는 [NOTICE.md](NOTICE.md)에서 별도로 안내합니다.
 
 각 후보의 원작과 직접 출처는 [출처 목록](SOURCES.md)과 후보별 문서에 있습니다. 이 저장소는 정보 배치와 조작 원리를 비교하는 자료이며, 원작 제품과의 제휴·승인·성능 보증을 의미하지 않습니다.
 
