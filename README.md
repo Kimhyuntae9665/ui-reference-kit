@@ -6,21 +6,46 @@
 
 **설치 없이 사진 책자를 볼 수 있고, Python만 있으면 선택 갤러리를 실행할 수 있습니다.** 디자인 도구·Node.js·API 키·LLM은 필요하지 않습니다.
 
-![이번에 추가한12개 참고 사례](expansion-preview.png)
+## 사진부터 살펴보기
 
-**추가21–32번만 보기:** 로컬에서 [추가 사진 목차](OVERVIEW.html#new)를 열거나 선택 갤러리의 **추가12개**를 누르세요. [확장 조사와 방법론](docs/RESEARCH_EXPANSION_20261009.md)에 조사 경로·선정 이유·접근 한계를 정리했습니다.
+| 보고 싶은 내용 | 바로 가기 |
+| --- | --- |
+| 새로 추가한 21–32번의 큰 사진과 해설 | **[추가 12개 사진 해설집](docs/EXPANDED_STYLES.md)** |
+| 모든 후보의 설명과 원본 출처 | [32개 전체 설명](CATALOG.md) · [출처 목록](SOURCES.md) |
+| 선택 갤러리의 실제 실행 화면 | [실행 화면과 사용 순서](docs/GALLERY_SCREENSHOTS.md) |
+| 내 컴퓨터에서 실행하는 방법 | [처음 사용하는 분 안내](#1-처음-사용하는-분은-여기부터) |
+| 다른 AI·Codex 세션에 전달하는 방법 | [복사해서 쓰는 요청문](NEW_SESSION_PROMPT.md) |
+| 해외 사례를 찾고 선정한 과정 | [확장 조사·조작 확인 기록](docs/RESEARCH_EXPANSION_20261009.md) |
 
-<details><summary>초기20개 미리보기</summary>
+### 새로 추가한 12개 참고 사례
 
-![초기20개 참고 화면](overview.jpg)
+사진 목차에서 **21–32번**의 차이를 먼저 비교하세요. 사진을 크게 읽으려면 [개별 사진 해설집](docs/EXPANDED_STYLES.md)을 여세요. 이 문서는 GitHub에서도 바로 볼 수 있습니다.
+
+![추가 12개 참고 사례의 사진 목차](expansion-preview.png)
+
+### 같은 방법을 업무 화면에 적용하면
+
+아래는 자체 제작한 **정적인 SVG 시안**입니다. 합성 예시로 정보 배치와 읽는 순서를 비교하며, 제안한 업무 조작·계산은 구현되지 않았습니다. 원본 참고 화면과 같은 번호로 연결됩니다.
+
+![추가 12개 방법을 적용한 자체 SVG 시안 · 미구현](expansion-concepts-preview.png)
+
+**로컬에서 신규 후보만 보기:** `OVERVIEW.html#new`를 열거나 선택 갤러리의 **추가 12개**를 누르세요. GitHub의 HTML 파일 페이지는 소스 보기이므로, 실행하려면 ZIP을 내려받아 아래 안내를 따라야 합니다.
+
+<details>
+<summary>실제로 실행한 선택 갤러리 보기</summary>
+
+필터·사진 확대·원본/시안 전환·최대 3개 선택이 가능한 갤러리의 브라우저 캡처입니다. 사진 목차와 달리 실제 선택 화면의 구성을 보여줍니다.
+
+![추가 12개를 표시한 선택 갤러리 실행 화면](docs/screenshots/gallery-new-reference.png)
+
+[상세 화면과 사용 순서 더 보기](docs/GALLERY_SCREENSHOTS.md)
 
 </details>
 
-<details><summary>새12개 방법을 같은 업무에 적용한 자체 시안 · 미구현</summary>
+<details>
+<summary>초기 20개 참고 사례도 보기</summary>
 
-![추가12개 자체 SVG 시안](expansion-concepts-preview.png)
-
-정적 구상입니다. 갤러리의 필터·선택·확대 기능과 시안 내부에 제안한 업무 조작을 구분합니다.
+![초기 20개 참고 화면](overview.jpg)
 
 </details>
 
@@ -61,8 +86,8 @@ python -m http.server 5176 --bind 127.0.0.1
 
 | 조작 | 무엇을 할 수 있나요? |
 | --- | --- |
-|32개 전체 / 추가12개 / 분류 / 5개 묶음|전체·신규·분류별 비교, 마지막31–32도 표시|
-| 실제 참고 화면 / 프로젝트 적용 구상 | 원작 캡처와 새 SVG 시안을 구분해서 보기 |
+| 32개 전체 / 추가 12개 / 분류 / 5개 묶음 | 전체·신규·분류별 비교, 마지막 31–32도 표시 |
+| 출처 참고 자료 / 프로젝트 적용 구상 | 원작 캡처와 새 SVG 시안을 구분해서 보기 |
 | 사진 클릭 | 확대 화면, 출처, 적용 방향, 조작 아이디어, 단점 읽기 |
 | 이 방향 선택 | 후보 최대 3개 선택 |
 | 선택한 방향 | 고른 후보만 모아 비교 |
@@ -175,9 +200,9 @@ concepts/NN-concept.svg를 직접 확인하세요.
 | `concepts/NN-concept.svg` | 같은 합성 업무 예시로 새로 구성한 디자인 시안. 미구현 |
 | `current-implementation/` | 선택한 원리를 후속 데모에 적용한 실제 실행 캡처. 앱 전체 소스는 포함하지 않음 |
 
-초기20개 SVG는 예시 수량 **발주100 / 입고80 / 청구100**, 단가 **10,000원 / 10,800원**을 동일하게 사용해 구성 방식만 비교했습니다. 회사 운영 성과나 원작 제품의 성능을 나타내는 값이 아닙니다.
+초기 20개 SVG는 예시 수량 **발주100 / 입고80 / 청구100**, 단가 **10,000원 / 10,800원**을 동일하게 사용해 구성 방식만 비교했습니다. 회사 운영 성과나 원작 제품의 성능을 나타내는 값이 아닙니다.
 
-추가12개도 같은 업무 맥락에서 표현 원리를 새로 그린 **정적인 미구현 시안**입니다. 참고 원작의 조작을 이 갤러리에서 그대로 실행하는 것은 아닙니다.31처럼 실제 공간 데이터가 필요한 방향은 적합 도메인과 한계를 먼저 검토하세요.
+추가 12개도 같은 업무 맥락에서 표현 원리를 새로 그린 **정적인 미구현 시안**입니다. 참고 원작의 조작을 이 갤러리에서 그대로 실행하는 것은 아닙니다. 31번처럼 실제 공간 데이터가 필요한 방향은 적합 도메인과 한계를 먼저 검토하세요.
 
 초기 적용 사례는 **03 공간감 + 05 간결한 흐름 + 19 기술적 분해**입니다. 이 조합으로 운영 공간·흐름 실험·네 층의 근거 보기를 만들었습니다. 선택 이유와 실제 캡처는 [DECISIONS.md](DECISIONS.md)에 있습니다. 이 선택을 모든 프로젝트의 정답으로 제시하지 않습니다.
 
@@ -188,7 +213,9 @@ ui-reference-kit/
 ├── README.md                  # 시작 안내
 ├── index.html                 # 사진·설명 책자, 서버 없이 열기
 ├── OVERVIEW.html              #32개 참고 이미지 목차
-├── overview.jpg               # README 미리보기
+├── overview.jpg               # 초기 20개 사진 목차
+├── expansion-preview.png      # 추가 12개 사진 목차
+├── expansion-concepts-preview.png # 추가 12개 자체 시안
 ├── candidates/01.md … 32.md    # 후보별 설명·출처
 ├── images/01-reference.jpg …   # 실제 참고 화면 캡처
 ├── concepts/01-concept.svg …   # 자체 SVG 시안
@@ -201,7 +228,10 @@ ui-reference-kit/
 ├── NEW_SESSION_PROMPT.md       # 재사용 요청 예시
 ├── CONTRIBUTING.md            # 새 후보·설명 추가 방법
 ├── NOTICE.md                  # 원작·캡처·라이선스 구분
-├── docs/RESEARCH_EXPANSION_20261009.md # 확장 조사·검증
+├── docs/                      # 확장 해설·실행 캡처·조사 기록
+│   ├── EXPANDED_STYLES.md      # 추가 12개 큰 사진과 설명
+│   ├── GALLERY_SCREENSHOTS.md  # 실행 화면과 사용 순서
+│   └── screenshots/           # 갤러리 실행 캡처 3개
 ├── scripts/build_catalog.py    # 데이터에서 문서·갤러리 생성
 └── scripts/validate.py         # 개수·링크·SVG 검수
 ```
@@ -231,7 +261,7 @@ Python 표준 라이브러리만 사용해 후보 ID·이미지·설명·SVG·�
 
 ## 10. 라이선스와 출처
 
-**자체 코드·문서·SVG 시안은 [MIT License](LICENSE)로 재사용할 수 있습니다.** 외부 제품·사이트의 참고 캡처와 로고는 해당 권리자에게 귀속되며 MIT 적용 대상이 아닙니다. `images/`, `overview.jpg`, `expansion-preview.png`, `current-implementation/`의 캡처 권리는 [NOTICE.md](NOTICE.md)에서 별도로 안내합니다.
+**자체 코드·문서·SVG 시안은 [MIT License](LICENSE)로 재사용할 수 있습니다.** 외부 제품·사이트의 참고 캡처와 로고는 해당 권리자에게 귀속되며 MIT 적용 대상이 아닙니다. `images/`, `overview.jpg`, `expansion-preview.png`, `docs/screenshots/`, `current-implementation/`의 캡처 권리는 [NOTICE.md](NOTICE.md)에서 별도로 안내합니다.
 
 각 후보의 원작과 직접 출처는 [출처 목록](SOURCES.md)과 후보별 문서에 있습니다. 이 저장소는 정보 배치와 조작 원리를 비교하는 자료이며, 원작 제품과의 제휴·승인·성능 보증을 의미하지 않습니다.
 
