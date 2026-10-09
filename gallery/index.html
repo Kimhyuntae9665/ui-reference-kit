@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="ko">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Matchroom — 20가지 화면 방향</title><link rel="stylesheet" href="./styles.css"></head>
+<body>
+  <header class="masthead"><a class="wordmark" href="#all">MATCHROOM <span>시각 방향 탐색</span></a><span class="status" id="global-status">실제 출처 화면</span></header>
+  <main>
+    <section class="intro"><div><p class="eyebrow">INPUT → MATCH → EXCEPTION → HUMAN APPROVAL</p><h1>업무가 보이는 화면, 20가지 방향.</h1></div><div class="global-switch segmented" aria-label="전체 미리보기 종류"><button id="global-reference" aria-pressed="true">실제 참고 화면</button><button id="global-concept" aria-pressed="false">프로젝트 적용 구상</button></div></section>
+    <nav class="toolbar" aria-label="보기 방식"><div class="group"><a href="#all" data-view="all">20개 전체</a><span class="nav-label">5개씩 크게 보기</span><a href="#sheet-1" data-view="sheet-1">01–05</a><a href="#sheet-2" data-view="sheet-2">06–10</a><a href="#sheet-3" data-view="sheet-3">11–15</a><a href="#sheet-4" data-view="sheet-4">16–20</a></div><button id="favorites-view">선택한 방향 <span id="favorite-count">0</span>/3</button></nav>
+    <div class="sheet-context"><p id="view-caption">실제 참고 화면 · 전체</p><p id="view-note">원본 제품·프로젝트 화면 · 출처는 각 상세에서 확인</p></div>
+    <section id="gallery" aria-label="시각 방향 목록"></section>
+    <p id="empty" hidden>아직 선택한 방향이 없습니다. 화면을 열고 ‘이 방향 선택’을 누르세요.</p>
+    <details id="github-baselines"><summary>내 GitHub 기준 화면 <span>실제 기존 프로젝트</span></summary><div id="baseline-grid"></div></details>
+    <footer>실제 출처 화면과 Matchroom 적용 구상은 별도 보기입니다. 적용 구상은 새 SVG이며 구현·운영 성과가 아닙니다.</footer>
+  </main>
+  <dialog id="detail" aria-labelledby="detail-title"><div class="detail-head"><div><span id="detail-id" class="eyebrow"></span><h2 id="detail-title"></h2></div><button id="close-detail" class="close" aria-label="상세 닫기">닫기 ×</button></div><div class="detail-actions"><div class="segmented"><button id="concept-tab" aria-pressed="true">Matchroom 구상</button><button id="reference-tab" aria-pressed="false">실제 참고 보기</button></div><button id="choose-style">이 방향 선택</button></div><div id="detail-visual"></div><div class="detail-info"><div><h3>Matchroom 적용</h3><p id="adaptation"></p></div><div><h3>조작 아이디어</h3><p id="interaction"></p></div><div><h3>선택할 때 고려할 점</h3><p id="tradeoff"></p></div></div><div class="source-strip"><span id="reference-name"></span><a id="source-link" target="_blank" rel="noopener noreferrer" hidden>원본 출처 열기 ↗</a></div><p id="evidence-note" class="evidence-note"></p></dialog>
+  <div id="toast" role="status" aria-live="polite"></div>
+  <script src="./scenes.js"></script><script src="./board.js"></script>
+</body></html>
